@@ -5,38 +5,39 @@ This project build an 3-hour, 0.25° ERA5 dataset over China (73–136°E, 18–
 for ConvLSTM, Informer, PatchTST, and a Hybrid Patch-Informer (PatchTST features + low-rank spatial head + Informer).
 
 Code Structure：
-
+<pre>
 repo-root/
-
-├── layers/                         # Reusable modules / custom layers
-├── results*/                       # Training outputs (logs, figs, metrics)
-├── dataset.py                      # Windowing & data loaders (series/grid)
-├── input.py                        # Merge / normalization helpers
-├── Initial_Check.py                # Sanity checks for dims/time/missing
-├── ToZarr.py                       # Merge NetCDF → Zarr
-├── IC_Zarr.py                      # Zarr integrity/index checks
-├── CovLSTM.py                      # ConvLSTM model
-├── informer.py                     # Informer model
-├── PatchTST.py                     # PatchTST model
-├── CoVLSTM_Train.py                # Train ConvLSTM
-├── informer_train.py               # Train Informer (main)
-├── informer_train1.py              # Train Informer (variant)
-├── PatchTST_Train.py               # Train PatchTST
-├── Patch_Informer_Train.py         # Train Hybrid (PatchTST + low-rank spatial head + Informer)
-├── eval_extreme_convlstm.py        # Extreme-wind eval: ConvLSTM
-├── eval_extreme_informer.py        # Extreme-wind eval: Informer
-├── eval_extreme_PatchTST.py        # Extreme-wind eval: PatchTST
-├── eval_extreme_PatchTST_Informer.py # Extreme-wind eval: Hybrid
-├── Graph.py                        # Plotting utils
-├── function.py                     # Misc utilities
-├── scaler_train.npz                # Train-only {mean, std}
-├── best_convlstm.pt                # Weights (Git LFS)
+├── layers/                     # custom layers
+├── results*/                   # training outputs
+├── dataset.py                  # windowing & loaders
+├── input.py                    # merge / normalization
+├── Initial_Check.py            # sanity checks
+├── ToZarr.py                   # NetCDF → Zarr
+├── IC_Zarr.py                  # Zarr checks
+├── CovLSTM.py                  # ConvLSTM model
+├── informer.py                 # Informer model
+├── PatchTST.py                 # PatchTST model
+├── CoVLSTM_Train.py            # train ConvLSTM
+├── informer_train.py           # train Informer
+├── informer_train1.py          # train Informer (alt)
+├── PatchTST_Train.py           # train PatchTST
+├── Patch_Informer_Train.py     # train Hybrid (PatchTST+low-rank head+Informer)
+├── eval_extreme_convlstm.py    # eval ConvLSTM
+├── eval_extreme_informer.py    # eval Informer
+├── eval_extreme_PatchTST.py    # eval PatchTST
+├── eval_extreme_PatchTST_Informer.py  # eval Hybrid
+├── Graph.py                    # plotting utils
+├── function.py                 # misc utils
+├── scaler_train.npz            # train-only mean/std
+├── best_convlstm.pt            # weights (Git LFS)
 ├── best_informer.pt
 ├── best_informer_2.pt
 ├── best_patchtst_grid.pt
 ├── best_patchtst_informer.pt
 ├── best_patchtst_series.pt
 └── README.md
+</pre>
+
 
 <details> <summary><b>Files by purpose (quick scan)</b></summary>
 
