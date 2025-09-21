@@ -5,6 +5,7 @@ This project build an 3-hour, 0.25° ERA5 dataset over China (73–136°E, 18–
 for ConvLSTM, Informer, PatchTST, and a Hybrid Patch-Informer (PatchTST features + low-rank spatial head + Informer).
 
 Code Structure：
+
 repo-root/
 
 ├── layers/                         # Reusable modules / custom layers
