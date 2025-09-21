@@ -39,24 +39,30 @@ repo-root/
 <details> <summary><b>Files by purpose (quick scan)</b></summary>
 
 Models
+
 CovLSTM.py, informer.py, PatchTST.py
 
 Training
+
 CoVLSTM_Train.py, informer_train.py, informer_train1.py,
 PatchTST_Train.py, Patch_Informer_Train.py
 
 Evaluation
+
 eval_extreme_convlstm.py, eval_extreme_informer.py,
 eval_extreme_PatchTST.py, eval_extreme_PatchTST_Informer.py
 
 Data & Preprocessing
+
 dataset.py, input.py, ToZarr.py, IC_Zarr.py, Initial_Check.py,
 scaler_train.npz
 
 Utilities & Outputs
+
 Graph.py, function.py, results*/
 
 Weights (LFS)
+
 best_*.pt (tracked with Git LFS)
 
 </details>
