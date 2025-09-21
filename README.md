@@ -5,34 +5,37 @@ This project build an 3-hour, 0.25° ERA5 dataset over China (73–136°E, 18–
 for ConvLSTM, Informer, PatchTST, and a Hybrid Patch-Informer (PatchTST features + low-rank spatial head + Informer).
 
 Code Structure：
-├─ layers/                           # Reusable model/layer components
-├─ best_convlstm.pt                  # Model weights (use Git LFS)
-├─ best_informer.pt
-├─ best_informer_2.pt
-├─ best_patchtst_grid.pt
-├─ best_patchtst_informer.pt
-├─ best_patchtst_series.pt
-├─ CovLSTM.py                        # ConvLSTM definition
-├─ CoVLSTM_Train.py                  # ConvLSTM training script
-├─ informer.py                       # Informer definition
-├─ informer_train.py                 # Informer training (main)
-├─ informer_train1.py                # Informer training (variant)
-├─ informer_v2.py                    # Informer variant
-├─ PatchTST.py                       # PatchTST definition
-├─ PatchTST_Train.py                 # PatchTST training
-├─ Patch_Informer_Train.py           # Hybrid: PatchTST + low-rank spatial head + Informer
-├─ hybrid_patchtst_informer.pt       # Hybrid model weights (LFS)
-├─ dataset.py                        # Dataset windowing & loaders
-├─ input.py                          # Data merge / normalization helpers
-├─ Initial_Check.py                  # Sanity checks for dims/time/missing
-├─ ToZarr.py                         # Merge NetCDF → Zarr
-├─ IC_Zarr.py                        # Zarr integrity/index checks
-├─ scaler_train.npz                  # Train-only mean/std
-├─ eval_extreme_convlstm.py          # Extreme-wind evaluation (ConvLSTM)
-├─ eval_extreme_informer.py          # Extreme-wind evaluation (Informer)
-├─ eval_extreme_PatchTST.py          # Extreme-wind evaluation (PatchTST)
-├─ eval_extreme_PatchTST_Informer.py # Extreme-wind evaluation (Hybrid)
-└─ Graph.py                          # Plotting utils
+repo-root/
+├── layers/                         # Reusable modules / custom layers
+├── results*/                       # Training outputs (logs, figs, metrics)
+├── dataset.py                      # Windowing & data loaders (series/grid)
+├── input.py                        # Merge / normalization helpers
+├── Initial_Check.py                # Sanity checks for dims/time/missing
+├── ToZarr.py                       # Merge NetCDF → Zarr
+├── IC_Zarr.py                      # Zarr integrity/index checks
+├── CovLSTM.py                      # ConvLSTM model
+├── informer.py                     # Informer model
+├── PatchTST.py                     # PatchTST model
+├── CoVLSTM_Train.py                # Train ConvLSTM
+├── informer_train.py               # Train Informer (main)
+├── informer_train1.py              # Train Informer (variant)
+├── PatchTST_Train.py               # Train PatchTST
+├── Patch_Informer_Train.py         # Train Hybrid (PatchTST + low-rank spatial head + Informer)
+├── eval_extreme_convlstm.py        # Extreme-wind eval: ConvLSTM
+├── eval_extreme_informer.py        # Extreme-wind eval: Informer
+├── eval_extreme_PatchTST.py        # Extreme-wind eval: PatchTST
+├── eval_extreme_PatchTST_Informer.py # Extreme-wind eval: Hybrid
+├── Graph.py                        # Plotting utils
+├── function.py                     # Misc utilities
+├── scaler_train.npz                # Train-only {mean, std}
+├── best_convlstm.pt                # Weights (Git LFS)
+├── best_informer.pt
+├── best_informer_2.pt
+├── best_patchtst_grid.pt
+├── best_patchtst_informer.pt
+├── best_patchtst_series.pt
+└── README.md
+
 
 Dataset: ERA5 hourly data on single levels (CDS)
 https://cds.climate.copernicus.eu/datasets/reanalysis-era5-single-levels
