@@ -6,6 +6,7 @@ for ConvLSTM, Informer, PatchTST, and a Hybrid Patch-Informer (PatchTST features
 
 Code Structure：
 repo-root/
+
 ├── layers/                         # Reusable modules / custom layers
 ├── results*/                       # Training outputs (logs, figs, metrics)
 ├── dataset.py                      # Windowing & data loaders (series/grid)
