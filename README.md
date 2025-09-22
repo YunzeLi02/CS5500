@@ -31,9 +31,8 @@ repo-root/
 ├── scaler_train.npz            # train-only mean/std
 ├── best_convlstm.pt            # weights (Git LFS)
 ├── best_informer.pt
-├── best_informer_2.pt
-├── best_patchtst_grid.pt
 ├── best_patchtst_informer.pt
+├── best_patchtst_series.pt
 ├── best_patchtst_series.pt
 └── README.md
 </pre>
@@ -62,11 +61,15 @@ scaler_train.npz
 
 Utilities & Outputs
 
-Graph.py, function.py, results*/
+Graph.py
 
 Weights (LFS)
 
 best_*.pt (tracked with Git LFS)
+
+Data Set Sample
+
+instant_2022.1.nc
 
 </details>
 
@@ -87,3 +90,5 @@ Grid: grid = [0.25, 0.25]
 Time: 2022-01 → 2024-12, 3-hour 00:00, 03:00, 06:00.... 21:00
 
 Format: netcdf
+
+The instant_2022.1.nc file serves as a sample dataset containing the aforementioned variables, with a 3-hour time interval and a time dimension spanning the first half of 2022 (January to June).
