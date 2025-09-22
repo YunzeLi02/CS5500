@@ -48,7 +48,7 @@ Training
 
 CoVLSTM_Train.py, informer_train.py, informer_train1.py,
 PatchTST_Train.py, Patch_Informer_Train.py
-
+(The PatchTST model code and portions of the Patch-Informer code are sourced from GitHubs. https://github.com/yuqinie98/PatchTST)
 Evaluation
 
 eval_extreme_convlstm.py, eval_extreme_informer.py,
