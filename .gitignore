@@ -1,0 +1,12 @@
+﻿# Ignore everything by default
+*
+# Allow traversing subdirectories (to reach pt/nc files)
+!*/
+# Keep large-file types
+!*.pt
+!*.nc
+# Keep repo control files
+!README.md
+!README.MD
+!.gitattributes
+!.gitignore
