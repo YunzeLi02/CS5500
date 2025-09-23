@@ -9,8 +9,8 @@ Code Structure：
 repo-root/
 ├── layers/                     # Includes PatchTST model components such as PatchTST-backbone
 ├── dataset.py                  # windowing & loaders
-├── input.py                    # merge / normalization
-├── Initial_Check.py            # sanity checks
+├── input.py                    # Data merge / normalization
+├── Initial_Check.py            # sanity checks for NetCDF
 ├── ToZarr.py                   # NetCDF → Zarr
 ├── IC_Zarr.py                  # Zarr checks
 ├── CovLSTM.py                  # ConvLSTM model
