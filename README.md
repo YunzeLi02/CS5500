@@ -90,3 +90,5 @@ Time: 2022-01 → 2024-12, 3-hour 00:00, 03:00, 06:00.... 21:00
 Format: netcdf
 
 The instant_2022.1.nc file serves as a sample dataset containing the aforementioned variables, with a 3-hour time interval and a time dimension spanning the first half of 2022 (January to June).
+
+During actual code execution, first run input.py to merge the six NetCDF files. Upon completion, execute initialcheck.py to conduct a preliminary assessment of the dataset quality. Subsequently, run ToZarr.py to convert this dataset into the Zarr format suitable for model predictions. Finally, execute IC_Zarr.py to perform a final evaluation of the dataset quality and generate the dataset scaler.npz file based on the training set. This file will be used for subsequent format conversion between variables.
