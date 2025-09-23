@@ -8,7 +8,6 @@ Code Structure：
 <pre>
 repo-root/
 ├── layers/                     # custom layers
-├── results*/                   # training outputs
 ├── dataset.py                  # windowing & loaders
 ├── input.py                    # merge / normalization
 ├── Initial_Check.py            # sanity checks
@@ -19,7 +18,6 @@ repo-root/
 ├── PatchTST.py                 # PatchTST model
 ├── CoVLSTM_Train.py            # train ConvLSTM
 ├── informer_train.py           # train Informer
-├── informer_train1.py          # train Informer (alt)
 ├── PatchTST_Train.py           # train PatchTST
 ├── Patch_Informer_Train.py     # train Hybrid (PatchTST+low-rank head+Informer)
 ├── eval_extreme_convlstm.py    # eval ConvLSTM
