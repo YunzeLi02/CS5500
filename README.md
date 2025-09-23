@@ -82,11 +82,10 @@ instant_2022.1.nc
 Dataset: ERA5 hourly data on single levels (CDS)
 https://cds.climate.copernicus.eu/datasets/reanalysis-era5-single-levels
 
-Dynamic variables:
+Selected variables:
 10m_u_component_of_wind (u10), 10m_v_component_of_wind (v10),
 100m_u_component_of_wind (u10), 100m_v_component_of_wind (v10),
-2m_temperature (t2m), mean_sea_level_pressure (msl),
-total_precipitation (tp), boundary_layer_height (blh)
+2m_temperature (t2m), Surface pressure (sp), boundary_layer_height (blh)
 standard_deviation_of_orography (sdor), slope_of_sub-gridscale_orography (slor)
 
 Area: area = [North=45, West=73, South=18, East=136]
