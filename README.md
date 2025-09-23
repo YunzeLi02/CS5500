@@ -7,7 +7,7 @@ for ConvLSTM, Informer, PatchTST, and a Hybrid Patch-Informer (PatchTST features
 Code Structure：
 <pre>
 repo-root/
-├── layers/                     # custom layers
+├── layers/                     # Includes PatchTST model components such as PatchTST-backbone
 ├── dataset.py                  # windowing & loaders
 ├── input.py                    # merge / normalization
 ├── Initial_Check.py            # sanity checks
