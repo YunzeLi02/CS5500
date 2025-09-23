@@ -8,30 +8,38 @@ Code Structure：
 <pre>
 repo-root/
 ├── layers/                     # Includes PatchTST model components such as PatchTST-backbone
-├── dataset.py                  # windowing & loaders
-├── input.py                    # Data merge / normalization
-├── Initial_Check.py            # sanity checks for NetCDF
-├── ToZarr.py                   # NetCDF → Zarr
-├── IC_Zarr.py                  # Zarr checks
-├── CovLSTM.py                  # ConvLSTM model
-├── informer.py                 # Informer model
-├── PatchTST.py                 # PatchTST model
-├── CoVLSTM_Train.py            # train ConvLSTM
-├── informer_train.py           # train Informer
-├── PatchTST_Train.py           # train PatchTST
-├── Patch_Informer_Train.py     # train Hybrid (PatchTST+low-rank head+Informer)
-├── eval_extreme_convlstm.py    # eval ConvLSTM
-├── eval_extreme_informer.py    # eval Informer
-├── eval_extreme_PatchTST.py    # eval PatchTST
-├── eval_extreme_PatchTST_Informer.py  # eval Hybrid
+│
+├── Data Initialization/            # Includes dataset format conversion and quality checks
+│   ├── input.py                    # Data merge / normalization
+│   ├── Initial_Check.py            # sanity checks for NetCDF
+│   ├── ToZarr.py                   # NetCDF → Zarr
+│   └── IC_Zarr.py                  # Zarr checks
+│
+├── Model Core + Data Pipeline/     # Includes dataset + model main body
+│   ├── dataset.py                  # windowing & loaders
+│   ├── CovLSTM.py                  # ConvLSTM model
+│   ├── informer.py                 # Informer model
+│   └── PatchTST.py                 # PatchTST model
+│
+├── Training/                       # Includes model training code
+│   ├── CoVLSTM_Train.py            # train ConvLSTM
+│   ├── informer_train.py           # train Informer
+│   ├── PatchTST_Train.py           # train PatchTST
+│   └── Patch_Informer_Train.py     # train Hybrid (PatchTST+low-rank head+Informer)
+│ 
+├── Tail Evaluation/                # Includes tail evaluation code
+│   ├── eval_extreme_convlstm.py    # eval ConvLSTM
+│   ├── eval_extreme_informer.py    # eval Informer
+│   ├── eval_extreme_PatchTST.py    # eval PatchTST
+│   └── eval_extreme_PatchTST_Informer.py  # eval Hybrid
+│
 ├── Graph.py                    # plotting utils
-├── function.py                 # misc utils
 ├── scaler_train.npz            # train-only mean/std
-├── best_convlstm.pt            # weights (Git LFS)
-├── best_informer.pt
-├── best_patchtst_informer.pt
-├── best_patchtst_series.pt
-├── best_patchtst_series.pt
+├── best_convlstm.pt            # best weights for ConvLSTM(Git LFS)
+├── best_informer.pt            # best weights for Informer(Git LFS)
+├── best_patch_informer.pt      # best weights for Patch_Informer(Git LFS)
+├── best_patchtst_series.pt     # best weights for PatchTST(Git LFS)
+├── instant_2022.1.nc           # data sample of this research(Git LFS)
 └── README.md
 </pre>
 
